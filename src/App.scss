@@ -153,11 +153,18 @@ body {
   justify-content: space-between;
 }
 
-.hotel-view {
-  background-color: var(--color-white);
-  flex: 1; //will take all available space
+.view {
+  flex: 1; 
+}
 
-  // height: 80rem;
+.hotels-view {
+  flex: 1;
+  height: 80rem;
+}
+
+.hotel-view {
+    background-color: var(--color-white);
+    flex: 1; 
 }
 
 .detail {
@@ -172,6 +179,28 @@ body {
   }
   @media only screen and (max-width: $bp-small) {
     flex-direction: column;
+  }
+}
+
+.hotels {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+}
+
+.spinner {
+  flex: 1;
+  height: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__gif {
+    width: 15rem;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -452,6 +481,79 @@ body {
   }
 }
 
+/* ============
+    HOTELS
+==============*/
+
+.hotels__details {
+  flex: 0 0 60%;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  background-color: #fff;
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  box-shadow: 0 2rem 5rem rgba(0,0,0,.06);
+  box-shadow: var(--shadow-light);
+
+  display: flex;
+  align-items: center;
+}
+
+.hotels {
+
+  &__photo {
+    box-sizing: content-box; //as border takes some width
+    height: 10rem;
+    width: 15rem;
+    border: 3px solid var(--color-white);
+    margin-right: 1.5rem;
+  }
+  
+  &__link {
+    text-decoration: none;
+    color: var(--color-grey-dark-1);
+  }
+
+
+  &__info {
+    margin-right: 1.5rem;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: auto;
+  }
+
+  &__location {
+    font-size: 1.1rem;
+    color: var(--color-grey-dark-3);
+    // text-transform: uppercase;
+  }
+
+  &__stars {
+    // display: flex;
+    margin-top: 10px;
+    margin-left: -1.5px;
+  }
+  // &__score {
+  //   color: var(--color-primary);
+  //   font-size: 1.5rem;
+  //   font-weight: 300;
+  // }
+  &__price {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 300;
+  }
+}
+
+
 /*==============
     GALLERY
 ===============*/
@@ -461,6 +563,8 @@ body {
 
   &__photo {
     width: 100%;
+    max-width: 50rem;
+    min-height: 100%;
     display: block;
   }
 }
@@ -554,10 +658,12 @@ body {
 .btn-inline {
   border: none;
   color: var(--color-primary);
-  font-size: inherit;
+  // font-size: inherit;
+  font-size: 1.5rem;
   border-bottom: 1px solid currentColor; //will have the color of the text
   padding-bottom: 2px;
-  display: inline-block;
+  margin: 0 auto;
+  display: block;
   background-color: transparent;
   cursor: pointer;
   transition: all .2s;

@@ -18,13 +18,13 @@ class Navbar extends Component {
 
         return (
             <header className="header">
-                <img src="img/logo.png" alt="travello logo" className="logo"/>
+                <img src="/img/logo.png" alt="travello logo" className="logo"/>
 
                 <form action="#" className="search">
                     <input type="text" className="search__input" placeholder="Search hotels"/>
                     <button className="search__button">
                         <svg className="search__icon">
-                            <use xlinkHref="img/sprite.svg#icon-magnifying-glass"></use>
+                            <use xlinkHref="/img/sprite.svg#icon-magnifying-glass"></use>
                         </svg>
                     </button>
                 </form>
@@ -32,20 +32,20 @@ class Navbar extends Component {
                 <nav className="user-nav">
                     <div className="user-nav__icon-box">
                         <svg className="user-nav__icon">
-                            <use xlinkHref="img/sprite.svg#icon-bookmark"></use>
+                            <use xlinkHref="/img/sprite.svg#icon-bookmark"></use>
                         </svg>
                         <span className="user-nav__notification">7</span>
                     </div>
 
                     <div className="user-nav__icon-box">
                         <svg className="user-nav__icon">
-                            <use xlinkHref="img/sprite.svg#icon-chat"></use>
+                            <use xlinkHref="/img/sprite.svg#icon-chat"></use>
                         </svg>
                         <span className="user-nav__notification">10</span>
                     </div>
 
                     <div className="user-nav__user">
-                        <img src="img/user.jpg" alt="User photo" className="user-nav__user-photo"/>
+                        <img src="/img/user.jpg" alt="User photo" className="user-nav__user-photo"/>
                         <span className="user-nav__user-name">John</span>
                     </div>
                 </nav>

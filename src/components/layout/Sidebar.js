@@ -23,7 +23,7 @@ class Sidebar extends Component {
                             <svg className="side-nav__icon">
                                 <use xlinkHref="img/sprite.svg#icon-home"></use>
                             </svg>
-                            <span>Hotel</span>
+                            <span>Hotels</span>
                         </Link>
                     </li>
 
@@ -32,7 +32,7 @@ class Sidebar extends Component {
                             <svg className="side-nav__icon">
                                 <use xlinkHref="img/sprite.svg#icon-aircraft-take-off"></use>
                             </svg>
-                            <span>Flight</span>
+                            <span>Flights</span>
                         </Link>
                     </li>
 
@@ -41,7 +41,7 @@ class Sidebar extends Component {
                             <svg className="side-nav__icon">
                                 <use xlinkHref="img/sprite.svg#icon-key"></use>
                             </svg>
-                            <span>Car rental</span>
+                            <span>Car rentals</span>
                         </Link>
                     </li>
 
@@ -55,7 +55,7 @@ class Sidebar extends Component {
                     </li>
                 </ul>
 
-                <div class="legal">
+                <div className="legal">
                     &copy; 2018 by travello. All rights reserved.
                 </div>
             </nav>
