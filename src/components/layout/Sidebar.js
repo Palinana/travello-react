@@ -21,7 +21,7 @@ class Sidebar extends Component {
                     <li className="side-nav__item side-nav__item--active">
                         <Link to="/" className="side-nav__link">
                             <svg className="side-nav__icon">
-                                <use xlinkHref="img/sprite.svg#icon-home"></use>
+                                <use xlinkHref="/img/sprite.svg#icon-home"></use>
                             </svg>
                             <span>Hotels</span>
                         </Link>
@@ -30,7 +30,7 @@ class Sidebar extends Component {
                     <li className="side-nav__item">
                         <Link to="/" className="side-nav__link">
                             <svg className="side-nav__icon">
-                                <use xlinkHref="img/sprite.svg#icon-aircraft-take-off"></use>
+                                <use xlinkHref="/img/sprite.svg#icon-aircraft-take-off"></use>
                             </svg>
                             <span>Flights</span>
                         </Link>
@@ -39,7 +39,7 @@ class Sidebar extends Component {
                     <li className="side-nav__item">
                         <Link to="/" className="side-nav__link">
                             <svg className="side-nav__icon">
-                                <use xlinkHref="img/sprite.svg#icon-key"></use>
+                                <use xlinkHref="/img/sprite.svg#icon-key"></use>
                             </svg>
                             <span>Car rentals</span>
                         </Link>
@@ -48,7 +48,7 @@ class Sidebar extends Component {
                     <li className="side-nav__item">
                         <Link to="/" className="side-nav__link">
                             <svg className="side-nav__icon">
-                                <use xlinkHref="img/sprite.svg#icon-map"></use>
+                                <use xlinkHref="/img/sprite.svg#icon-map"></use>
                             </svg>
                             <span>Tours</span>
                         </Link>
