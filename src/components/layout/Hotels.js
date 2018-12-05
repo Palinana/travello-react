@@ -24,12 +24,19 @@ class Hotels extends Component {
         }
         return stars;
     }
+
+    sortByPrice(data) {
+        const sortedData = data.sort((a,b) => {
+            return b.price - a.price
+        })
+        return sortedData;
+    }
    
     render() {
-        const { hotels } = this.props;
-        // console.log(this.props)
+        let { hotels } = this.props;
 
         if(hotels){
+            hotels = this.sortByPrice(hotels);
             return (
                 <div class="hotels-view">
                     <div className="hotels">

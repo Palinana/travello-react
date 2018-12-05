@@ -4,7 +4,7 @@ import spinner from './spinner.gif';
 export default () => {
   return (
     <div className="spinner">
-        <img src={spinner} alt="Loading" class="spinner__gif"/>
+        <img src={spinner} alt="Loading" className="spinner__gif"/>
     </div>
   )
 }

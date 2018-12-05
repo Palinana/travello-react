@@ -11,6 +11,7 @@ import HotelDetails from './components/layout/HotelDetails';
 
 import Sidebar from './components/layout/Sidebar';
 import Hotels from './components/layout/Hotels';
+import User from './components/layout/User';
 
 class App extends Component {
     render() {
@@ -21,10 +22,11 @@ class App extends Component {
                         <Navbar/>
                         <div className="content">
                             <Sidebar/>
-                            <main class="view">
+                            <main className="view">
                                 <Switch>
                                     <Route exact path="/" component={Hotels}/>
-                                    <Route exact path="/hotels/:id" component={HotelDetails}/>/}
+                                    <Route exact path="/hotels/:id" component={HotelDetails}/>
+                                    <Route exact path="/users/:id" component={User}/>
 
                                     {/* <Route path="/client/add" component={UserIsAuthenticated(AddClient)}/>
                                     <Route path="/client/edit/:id" component={UserIsAuthenticated(EditClient)}/>
