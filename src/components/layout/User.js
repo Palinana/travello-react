@@ -15,7 +15,7 @@ class User extends Component {
 
     render() {
         let { user } = this.props;
-        console.log('User ',user)
+        // console.log('User ',user)
         if(user){
             
             return (
@@ -26,11 +26,30 @@ class User extends Component {
                                 <img src={user.photo} alt="hotel" className="user-profile__photo"/>
                             </div>
                             <div className="user-profile__info">
-                                <h3>{user.firstName} {user.lastName}</h3>
-                                <h3><span>From</span> {user.city}, {user.country}</h3>
-                                <h3><span>Age</span> {user.age} </h3>
-                                <div className="user-profile__stat">Data</div>
+                                <h3 className="user-profile__user-name">{user.firstName} {user.lastName}</h3>
+                                <h3 className="user-profile__user-location"><span className="user-profile__user-span">From</span> {user.city}, {user.country}</h3>
+                                <h3 className="user-profile__user-age"><span className="user-profile__user-span">Age</span> {user.age} </h3>
+                                <div className="user-profile__data">
+                                    <div className="user-profile__data-info">
+                                        <div className="user-profile__data-section">Friends</div>
+                                        <div className="user-profile__data-number">45</div>
+                                    </div>
+                                    <div className="user-profile__data-info">
+                                        <div className="user-profile__data-section">Countries</div>
+                                        <div className="user-profile__data-number">8</div>
+                                    </div>
+                                    <div className="user-profile__data-info">
+                                        <div className="user-profile__data-section">Rewiews</div>
+                                        <div className="user-profile__data-number">12</div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        
+                        <div className="user-about">
+                            <div className="user-about__data">Visited <span className="user-about__span">3</span> countires</div>
+                            <div className="user-about__data">Had <span className="user-about__span">12</span> flights</div>
+                            <div className="user-about__data">Enjoyed <span className="user-about__span">7</span> tours</div>
                         </div>
                         
                     </div>    
