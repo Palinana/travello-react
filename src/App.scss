@@ -159,7 +159,7 @@ body {
 
 .hotels-view {
   flex: 1;
-  height: 80rem;
+  // height: 80rem;
 }
 
 .hotel-view {
@@ -169,7 +169,7 @@ body {
 
 .user-profile-view {
   flex: 1;
-  height: 80rem;
+  // height: 80rem;
 }
 
 .user-profile-box {
@@ -587,6 +587,25 @@ body {
   }
 }
 
+/*===============
+    USER CHART
+=================*/
+.user-chart {
+  margin: 0 auto;
+  width: 45rem;
+  height: 45rem;
+
+  &__summary {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    padding: 3rem;
+  }
+}
+
+.chart {
+  margin-top: -4.5rem;
+}
 
 
 /*=================
@@ -656,19 +675,12 @@ body {
   &__location {
     font-size: 1.1rem;
     color: var(--color-grey-dark-3);
-    // text-transform: uppercase;
   }
 
   &__stars {
-    // display: flex;
     margin-top: 10px;
     margin-left: -1.5px;
   }
-  // &__score {
-  //   color: var(--color-primary);
-  //   font-size: 1.5rem;
-  //   font-weight: 300;
-  // }
   &__price {
     color: var(--color-primary);
     font-size: 2.2rem;
@@ -676,6 +688,47 @@ body {
   }
 }
 
+.search__dropdown {
+  background-color: var(--color-grey-light-2);
+    border-radius: 100px;
+    width: 90%;
+    margin-right: -3.25rem;
+}
+
+.show-all {
+  text-align: center;
+  padding: 0 0 4.5rem;
+  
+  &-btn {
+    padding: 2rem 7rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary));
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden; 
+    cursor: pointer;
+
+    & > * {
+      display: inline-block; 
+      height: 100%;
+      width: 100%;
+      transition: all .2s;
+    }
+
+    &:hover {
+      background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary));
+    }
+
+    &:focus {
+      outline: none;
+      animation: pulsate 1s infinite;
+    }
+  }
+}
 
 /*==============
     GALLERY

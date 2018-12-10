@@ -4,18 +4,21 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { firestoreConnect } from 'react-redux-firebase';
+
 import Spinner from '../layout/Spinner';
+import UserChart from '../layout/UserChart';
 
 class User extends Component {
     constructor() {
         super();
         this.state = {
+            userData: []
         }
     }
 
     render() {
         let { user } = this.props;
-        // console.log('User ',user)
+        console.log('User ',user)
         if(user){
             
             return (
@@ -32,26 +35,30 @@ class User extends Component {
                                 <div className="user-profile__data">
                                     <div className="user-profile__data-info">
                                         <div className="user-profile__data-section">Friends</div>
-                                        <div className="user-profile__data-number">45</div>
+                                        <div className="user-profile__data-number">{user.profileData['friends']}</div>
                                     </div>
                                     <div className="user-profile__data-info">
-                                        <div className="user-profile__data-section">Countries</div>
-                                        <div className="user-profile__data-number">8</div>
+                                        <div className="user-profile__data-section">Photos</div>
+                                        <div className="user-profile__data-number">{user.profileData['photos']}</div>
                                     </div>
                                     <div className="user-profile__data-info">
                                         <div className="user-profile__data-section">Rewiews</div>
-                                        <div className="user-profile__data-number">12</div>
+                                        <div className="user-profile__data-number">{user.profileData['reviews']}</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
                         <div className="user-about">
-                            <div className="user-about__data">Visited <span className="user-about__span">3</span> countires</div>
-                            <div className="user-about__data">Had <span className="user-about__span">12</span> flights</div>
-                            <div className="user-about__data">Enjoyed <span className="user-about__span">7</span> tours</div>
+                            <div className="user-about__data">Visited <span className="user-about__span">{user.travelData['countries']}</span> countires</div>
+                            <div className="user-about__data">Had <span className="user-about__span">{user.travelData['flights']}</span> flights</div>
+                            <div className="user-about__data">Enjoyed <span className="user-about__span">{user.travelData['tours']}</span> tours</div>
                         </div>
-                        
+
+                        <div className="user-chart">
+                            <h2 className="user-chart__summary">Your Summary</h2>
+                            <UserChart data={user.travelData}/>
+                        </div> 
                     </div>    
                 </div>   
             )
