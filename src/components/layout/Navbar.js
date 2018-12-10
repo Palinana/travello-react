@@ -12,8 +12,14 @@ class Navbar extends Component {
             isAuthenticated: false,
             currentUser: ''
         }
+        this.onChange = this.onChange.bind(this);
     }
     
+    onChange(e) {
+        let search = e.target.value
+        console.log('search: ', search)
+    }
+
     render() {
         let { users } = this.props;
         console.log('Users: ', users)
@@ -23,16 +29,15 @@ class Navbar extends Component {
         return (
             <header className="header">
                 <img src="/img/logo.png" alt="travello logo" className="logo"/>
-
                 <form action="#" className="search">
-                    <input type="text" className="search__input" placeholder="Search hotels"/>
+                    <input type="text" className="search__input" onChange={this.onChange} placeholder="Search hotels"/>
                     <button className="search__button">
                         <svg className="search__icon">
                             <use xlinkHref="/img/sprite.svg#icon-magnifying-glass"></use>
                         </svg>
                     </button>
                 </form>
-
+            
                 <nav className="user-nav">
                     <div className="user-nav__icon-box">
                         <svg className="user-nav__icon">
@@ -75,5 +80,3 @@ export default compose(
         users: state.firestore.ordered.users 
     }))
 )(Navbar);
-
-// export default Navbar;

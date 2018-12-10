@@ -17,7 +17,7 @@ class Hotels extends Component {
         const stars = [];
         for(let i=0;i<amount;i++){
             stars.push(
-                <svg class="overview__icon-star">
+                <svg className="overview__icon-star">
                     <use xlinkHref="/img/sprite.svg#icon-star"></use>
                 </svg>
             );
@@ -38,12 +38,12 @@ class Hotels extends Component {
         if(hotels){
             hotels = this.sortByPrice(hotels);
             return (
-                <div class="hotels-view">
+                <div className="hotels-view">
                     <div className="hotels">
                         { hotels.map(hotel => {
                             return (
                                 <div key={hotel.id} className="hotels__details">
-                                    <img src={hotel.images[0]} alt="hotel" class="hotels__photo"/>
+                                    <img src={hotel.images[0]} alt="hotel" className="hotels__photo"/>
                                     <div className="hotels__info">
                                         <Link to={`/hotels/${hotel.id}`} className="hotels__link"><h2 className="hotels__name">{hotel.name}</h2></Link>
                                         <span className="hotels__location">{hotel.city}, {hotel.country}</span>
@@ -58,7 +58,9 @@ class Hotels extends Component {
                             )    
                         })}
                     </div>
-                    <button class="btn-inline">Show all <span>&rarr;</span></button>
+                    <div className="show-all">
+                        <button className="show-all-btn">Show all</button>
+                    </div>
                 </div>   
             )
         }
